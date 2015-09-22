@@ -1,0 +1,11 @@
+1. apt-get install vsftpd
+2. apt-get install ftp
+3. nano etc/vsftpd.conf
+4. Change:
+    anonymous_enable=NO
+    local_enable=YES
+    write_enable=YES
+    connect_from_port_20=NO
+    chroot_local_user=YES
+    local_umask=022
+    pam_service_name=ftp
