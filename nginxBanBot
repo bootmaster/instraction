@@ -1,0 +1,1455 @@
+if ($http_user_agent ~* "slurp"){
+return 403;
+}
+if ($http_user_agent ~* "bingbot"){
+return 403;
+}
+if ($http_user_agent ~* "Googlebot"){
+return 403;
+}
+if ($http_user_agent ~* "MJ12bot"){
+return 403;
+}
+if ($http_user_agent ~* "Riddlerbot"){
+return 403;
+}
+if ($http_user_agent ~* "sogou spider"){
+return 403;
+}
+if ($http_user_agent ~* "YandexBot"){
+return 403;
+}
+if ($http_user_agent ~* "Baiduspider"){
+return 403;
+}
+if ($http_user_agent ~* "ia_archiver"){
+return 403;
+}
+if ($http_user_agent ~* "UptimeRobot"){
+return 403;
+}
+if ($http_user_agent ~* "Yahoo!"){
+return 403;
+}
+if ($http_user_agent ~* "TurnitinBot"){
+return 403;
+}
+if ($http_user_agent ~* "XoviBot"){
+return 403;
+}
+if ($http_user_agent ~* "Daumoa"){
+return 403;
+}
+if ($http_user_agent ~* "DotBot"){
+return 403;
+}
+if ($http_user_agent ~* "AhrefsBot"){
+return 403;
+}
+if ($http_user_agent ~* "Exabot"){
+return 403;
+}
+if ($http_user_agent ~* "CCBot"){
+return 403;
+}
+if ($http_user_agent ~* "ZumBot"){
+return 403;
+}
+if ($http_user_agent ~* "OpenWebSpider"){
+return 403;
+}
+if ($http_user_agent ~* "SearchmetricsBot"){
+return 403;
+}
+if ($http_user_agent ~* "SMTBot"){
+return 403;
+}
+if ($http_user_agent ~* "MSNBot"){
+return 403;
+}
+if ($http_user_agent ~* "stq_bot"){
+return 403;
+}
+if ($http_user_agent ~* "SeznamBot"){
+return 403;
+}
+if ($http_user_agent ~* "archive.org_bot"){
+return 403;
+}
+if ($http_user_agent ~* "gocrawl"){
+return 403;
+}
+if ($http_user_agent ~* "proximic"){
+return 403;
+}
+if ($http_user_agent ~* "Genieo Web filter"){
+return 403;
+}
+if ($http_user_agent ~* "EasouSpider"){
+return 403;
+}
+if ($http_user_agent ~* "meanpathbot"){
+return 403;
+}
+if ($http_user_agent ~* "JamesBOT"){
+return 403;
+}
+if ($http_user_agent ~* "Sitedomain-Bot"){
+return 403;
+}
+if ($http_user_agent ~* "ichiro"){
+return 403;
+}
+if ($http_user_agent ~* "contentDetection"){
+return 403;
+}
+if ($http_user_agent ~* "spbot"){
+return 403;
+}
+if ($http_user_agent ~* "ChangeDetection"){
+return 403;
+}
+if ($http_user_agent ~* "coccoc"){
+return 403;
+}
+if ($http_user_agent ~* "MetaJobBot"){
+return 403;
+}
+if ($http_user_agent ~* "OrangeBot"){
+return 403;
+}
+if ($http_user_agent ~* "Spinn3r"){
+return 403;
+}
+if ($http_user_agent ~* "Vagabondo"){
+return 403;
+}
+if ($http_user_agent ~* "GrapeshotCrawler"){
+return 403;
+}
+if ($http_user_agent ~* "WorldBrewBot"){
+return 403;
+}
+if ($http_user_agent ~* "NaverBot"){
+return 403;
+}
+if ($http_user_agent ~* "Mail.Ru bot"){
+return 403;
+}
+if ($http_user_agent ~* "sistrix"){
+return 403;
+}
+if ($http_user_agent ~* "SemrushBot"){
+return 403;
+}
+if ($http_user_agent ~* "WeViKaBot"){
+return 403;
+}
+if ($http_user_agent ~* "BacklinkCrawler"){
+return 403;
+}
+if ($http_user_agent ~* "ShopWiki"){
+return 403;
+}
+if ($http_user_agent ~* "WeSEE"){
+return 403;
+}
+if ($http_user_agent ~* "GigablastOpenSource"){
+return 403;
+}
+if ($http_user_agent ~* "Crawler4j"){
+return 403;
+}
+if ($http_user_agent ~* "bitlybot"){
+return 403;
+}
+if ($http_user_agent ~* "ProductoDownloadUrlBot/"){
+return 403;
+}
+if ($http_user_agent ~* "Qualidator.com Bot"){
+return 403;
+}
+if ($http_user_agent ~* "BLEXBot"){
+return 403;
+}
+if ($http_user_agent ~* "rogerbot"){
+return 403;
+}
+if ($http_user_agent ~* "Kraken"){
+return 403;
+}
+if ($http_user_agent ~* "FlipboardProxy"){
+return 403;
+}
+if ($http_user_agent ~* "Lipperhey Spider"){
+return 403;
+}
+if ($http_user_agent ~* "Jyxobot"){
+return 403;
+}
+if ($http_user_agent ~* "Job Roboter Spider"){
+return 403;
+}
+if ($http_user_agent ~* "Speedy Spider"){
+return 403;
+}
+if ($http_user_agent ~* "ImplisenseBot"){
+return 403;
+}
+if ($http_user_agent ~* "MojeekBot"){
+return 403;
+}
+if ($http_user_agent ~* "Wotbox"){
+return 403;
+}
+if ($http_user_agent ~* "linkdexbot"){
+return 403;
+}
+if ($http_user_agent ~* "voltron"){
+return 403;
+}
+if ($http_user_agent ~* "Seobility"){
+return 403;
+}
+if ($http_user_agent ~* "aiHitBot"){
+return 403;
+}
+if ($http_user_agent ~* "yacybot"){
+return 403;
+}
+if ($http_user_agent ~* "ICC-Crawler"){
+return 403;
+}
+if ($http_user_agent ~* "ShowyouBot"){
+return 403;
+}
+if ($http_user_agent ~* "psbot"){
+return 403;
+}
+if ($http_user_agent ~* "iCjobs"){
+return 403;
+}
+if ($http_user_agent ~* "SEOkicks-Robot"){
+return 403;
+}
+if ($http_user_agent ~* "WBSearchBot"){
+return 403;
+}
+if ($http_user_agent ~* "oBot"){
+return 403;
+}
+if ($http_user_agent ~* "EuripBot"){
+return 403;
+}
+if ($http_user_agent ~* "Alexabot"){
+return 403;
+}
+if ($http_user_agent ~* "magpie-crawler"){
+return 403;
+}
+if ($http_user_agent ~* "Woko"){
+return 403;
+}
+if ($http_user_agent ~* "omgilibot"){
+return 403;
+}
+if ($http_user_agent ~* "NetcraftSurveyAgent"){
+return 403;
+}
+if ($http_user_agent ~* "UASlinkChecker"){
+return 403;
+}
+if ($http_user_agent ~* "A6-Indexer"){
+return 403;
+}
+if ($http_user_agent ~* "Qirina Hurdler"){
+return 403;
+}
+if ($http_user_agent ~* "memoryBot"){
+return 403;
+}
+if ($http_user_agent ~* "Netseer"){
+return 403;
+}
+if ($http_user_agent ~* "JobdiggerSpider"){
+return 403;
+}
+if ($http_user_agent ~* "AntBot"){
+return 403;
+}
+if ($http_user_agent ~* "uMBot"){
+return 403;
+}
+if ($http_user_agent ~* "MergeFlow-PageReader"){
+return 403;
+}
+if ($http_user_agent ~* "bnf.fr_bot"){
+return 403;
+}
+if ($http_user_agent ~* "netEstate Crawler"){
+return 403;
+}
+if ($http_user_agent ~* "007AC9"){
+return 403;
+}
+if ($http_user_agent ~* "bl.uk_lddc_bot"){
+return 403;
+}
+if ($http_user_agent ~* "Blekkobot"){
+return 403;
+}
+if ($http_user_agent ~* "VoilaBot"){
+return 403;
+}
+if ($http_user_agent ~* "SEOdiver"){
+return 403;
+}
+if ($http_user_agent ~* "NextGenSearchBot"){
+return 403;
+}
+if ($http_user_agent ~* "TinEye"){
+return 403;
+}
+if ($http_user_agent ~* "AboutUsBot"){
+return 403;
+}
+if ($http_user_agent ~* "bot-pge.chlooe.com"){
+return 403;
+}
+if ($http_user_agent ~* "trendictionbot"){
+return 403;
+}
+if ($http_user_agent ~* "HubSpot Crawler"){
+return 403;
+}
+if ($http_user_agent ~* "DomainAppender"){
+return 403;
+}
+if ($http_user_agent ~* "linguatools"){
+return 403;
+}
+if ($http_user_agent ~* "YioopBot"){
+return 403;
+}
+if ($http_user_agent ~* "YoudaoBot"){
+return 403;
+}
+if ($http_user_agent ~* "YamanaLab-bot"){
+return 403;
+}
+if ($http_user_agent ~* "kinshoo"){
+return 403;
+}
+if ($http_user_agent ~* "bixocrawler"){
+return 403;
+}
+if ($http_user_agent ~* "ThumbSniper"){
+return 403;
+}
+if ($http_user_agent ~* "Dlvr.it/1.0"){
+return 403;
+}
+if ($http_user_agent ~* "MetaGeneratorCrawler"){
+return 403;
+}
+if ($http_user_agent ~* "Plukkie"){
+return 403;
+}
+if ($http_user_agent ~* "OpenCalaisSemanticProxy"){
+return 403;
+}
+if ($http_user_agent ~* "SBSearch"){
+return 403;
+}
+if ($http_user_agent ~* "Aboundexbot"){
+return 403;
+}
+if ($http_user_agent ~* "Impressumscrawler"){
+return 403;
+}
+if ($http_user_agent ~* "Infohelfer"){
+return 403;
+}
+if ($http_user_agent ~* "R6 bot"){
+return 403;
+}
+if ($http_user_agent ~* "LivelapBot/0.2"){
+return 403;
+}
+if ($http_user_agent ~* "URLAppendBot"){
+return 403;
+}
+if ($http_user_agent ~* " Scrubby"){
+return 403;
+}
+if ($http_user_agent ~* "SEOENGBot"){
+return 403;
+}
+if ($http_user_agent ~* "Experibot"){
+return 403;
+}
+if ($http_user_agent ~* "UnisterBot"){
+return 403;
+}
+if ($http_user_agent ~* "FreeWebMonitoring SiteChecker"){
+return 403;
+}
+if ($http_user_agent ~* "LinkWalker"){
+return 403;
+}
+if ($http_user_agent ~* "Browsershots"){
+return 403;
+}
+if ($http_user_agent ~* "BDCbot"){
+return 403;
+}
+if ($http_user_agent ~* "IstellaBot"){
+return 403;
+}
+if ($http_user_agent ~* "SpiderLing"){
+return 403;
+}
+if ($http_user_agent ~* "CareerBot"){
+return 403;
+}
+if ($http_user_agent ~* "SEOCentro bot"){
+return 403;
+}
+if ($http_user_agent ~* "BDFetch"){
+return 403;
+}
+if ($http_user_agent ~* "Online Domain Tools"){
+return 403;
+}
+if ($http_user_agent ~* "WordPress.com mShots"){
+return 403;
+}
+if ($http_user_agent ~* "WebTarantula.com Crawler"){
+return 403;
+}
+if ($http_user_agent ~* "NerdyBot"){
+return 403;
+}
+if ($http_user_agent ~* "CrazyWebCrawler-Spider"){
+return 403;
+}
+if ($http_user_agent ~* "Scrapy"){
+return 403;
+}
+if ($http_user_agent ~* "IntegromeDB"){
+return 403;
+}
+if ($http_user_agent ~* "WebThumbnail"){
+return 403;
+}
+if ($http_user_agent ~* "Panscient web crawler"){
+return 403;
+}
+if ($http_user_agent ~* "Cliqzbot"){
+return 403;
+}
+if ($http_user_agent ~* "dlvr.it"){
+return 403;
+}
+if ($http_user_agent ~* "TomTom places company search"){
+return 403;
+}
+if ($http_user_agent ~* "HypeStat"){
+return 403;
+}
+if ($http_user_agent ~* "AddThis.com"){
+return 403;
+}
+if ($http_user_agent ~* "datagnionbot"){
+return 403;
+}
+if ($http_user_agent ~* "MiaDev"){
+return 403;
+}
+if ($http_user_agent ~* "Pinterest"){
+return 403;
+}
+if ($http_user_agent ~* "MixBot"){
+return 403;
+}
+if ($http_user_agent ~* "SurcentroBot"){
+return 403;
+}
+if ($http_user_agent ~* "webmastercoffee"){
+return 403;
+}
+if ($http_user_agent ~* "Peeplo Screenshot Bot"){
+return 403;
+}
+if ($http_user_agent ~* "ZeerchBot"){
+return 403;
+}
+if ($http_user_agent ~* "AMZNKAssocBot"){
+return 403;
+}
+if ($http_user_agent ~* "SCFCrawler"){
+return 403;
+}
+if ($http_user_agent ~* "idmarch"){
+return 403;
+}
+if ($http_user_agent ~* "SputnikBot"){
+return 403;
+}
+if ($http_user_agent ~* "LinkedInBot"){
+return 403;
+}
+if ($http_user_agent ~* "seegnifybot"){
+return 403;
+}
+if ($http_user_agent ~* "dlcbot"){
+return 403;
+}
+if ($http_user_agent ~* "thumbshots-de-Bot"){
+return 403;
+}
+if ($http_user_agent ~* "NalezenCzBot"){
+return 403;
+}
+if ($http_user_agent ~* "pr-cy.ru Screenshot Bot"){
+return 403;
+}
+if ($http_user_agent ~* "LoadImpactPageAnalyzer"){
+return 403;
+}
+if ($http_user_agent ~* "AskQuickly"){
+return 403;
+}
+if ($http_user_agent ~* "STINGbot"){
+return 403;
+}
+if ($http_user_agent ~* "WebCorp"){
+return 403;
+}
+if ($http_user_agent ~* "BUbiNG"){
+return 403;
+}
+if ($http_user_agent ~* "Motoricerca-Robots.txt-Checker"){
+return 403;
+}
+if ($http_user_agent ~* "socialbm_bot"){
+return 403;
+}
+if ($http_user_agent ~* "HubSpot Connect"){
+return 403;
+}
+if ($http_user_agent ~* "Company News Search engine"){
+return 403;
+}
+if ($http_user_agent ~* "x28-job-bot"){
+return 403;
+}
+if ($http_user_agent ~* "COMODOSpider"){
+return 403;
+}
+if ($http_user_agent ~* "EveryoneSocialBot"){
+return 403;
+}
+if ($http_user_agent ~* "Ezooms"){
+return 403;
+}
+if ($http_user_agent ~* "Symfony Spider"){
+return 403;
+}
+if ($http_user_agent ~* "Iframely"){
+    return 403;
+  }
+  if ($http_user_agent ~* "KrOWLer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Twingly Recon"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Robots_Tester"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FacebookExternalHit"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Arachnophilia"){
+    return 403;
+  }
+  if ($http_user_agent ~* "eCommerceBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "emefgebot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Nuhk"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Najdi.si"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SecurityResearchBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CloudServerMarketSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "YYSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "200PleaseBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Steeler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "nekstbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "360Spider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LoadTimeBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "webinatorbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Leikibot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "musobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "search.KumKie.com"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Nigma.ru"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CompSpyBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SeoCheckBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "hawkReader"){
+    return 403;
+  }
+  if ($http_user_agent ~* "PercolateCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Butterfly"){
+    return 403;
+  }
+  if ($http_user_agent ~* "008"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Slackbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Falconsbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SSL-Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Embedly"){
+    return 403;
+  }
+  if ($http_user_agent ~* "backlink-check.de"){
+    return 403;
+  }
+  if ($http_user_agent ~* "adressendeutschland.de"){
+    return 403;
+  }
+  if ($http_user_agent ~* "XRL"){
+    return 403;
+  }
+  if ($http_user_agent ~* "IdeelaborPlagiaat"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SiteCondor"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Web-Monitoring"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Vedma"){
+    return 403;
+  }
+  if ($http_user_agent ~* "parsijoo"){
+    return 403;
+  }
+  if ($http_user_agent ~* "GarlikCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FyberSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "classbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Feedly"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WebCookies"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CloudFlare-AlwaysOnline"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Readability"){
+    return 403;
+  }
+  if ($http_user_agent ~* "suggybot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CatchBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Jabse.com Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "woriobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ExB Language Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "kulturarw"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BrainbruBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "KomodiaBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "IXEbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CMS Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "immediatenet thumbnails"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Shareaholicbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Qualidator.com SiteAnalyzer 1.0"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BegunAdvertising"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LuminateBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "linkdex.com"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Curious George"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Fetch-Guess"){
+    return 403;
+  }
+  if ($http_user_agent ~* "alexa site audit"){
+    return 403;
+  }
+  if ($http_user_agent ~* "AraBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CliqzBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "findlinks"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CCResearchBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Semantifire"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LinkAider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Zookabot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ScreenerBot Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "PaperLiBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "QuerySeekerSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Crowsnest"){
+    return 403;
+  }
+  if ($http_user_agent ~* "UnwindFetchor"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MetaURI API"){
+    return 403;
+  }
+  if ($http_user_agent ~* "AcoonBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Gigabot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "firmilybot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Sosospider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "OpenindexSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MetaHeadersBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Strokebot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "GeliyooBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ownCloud Server Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CirrusExplorer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ProCogSEOBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Open Web Analytics Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "RyzeCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "discoverybot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "crawler for netopian"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ADmantX Platform Semantic Analyzer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Linguee Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SolomonoBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Grahambot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Automattic Analytics Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "PiplBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FlightDeckReportsBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "fastbot crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "4seohuntBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Updownerbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "JikeSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "NLNZ_IAHarvester"){
+    return 403;
+  }
+  if ($http_user_agent ~* "wsAnalyzer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "YodaoBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Esribot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Thumbshots.ru"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BlogPulse"){
+    return 403;
+  }
+  if ($http_user_agent ~* "bot.wsowner.com"){
+    return 403;
+  }
+  if ($http_user_agent ~* "wscheck.com"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Qseero"){
+    return 403;
+  }
+  if ($http_user_agent ~* "drupact"){
+    return 403;
+  }
+  if ($http_user_agent ~* "HuaweiSymantecSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "PagePeeker"){
+    return 403;
+  }
+  if ($http_user_agent ~* "HomeTags"){
+    return 403;
+  }
+  if ($http_user_agent ~* "facebookplatform"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Pixray-Seeker"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MeMoNewsBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ProCogBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WillyBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "peerindex"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MLBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WebNL"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Peepowbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Semager"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MIA Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "heritrix"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Eurobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DripfeedBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Whoismindbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Bad-Neighborhood"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Hailoobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "akula"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MetamojiCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Page2RSS"){
+    return 403;
+  }
+  if ($http_user_agent ~* "EasyBib AutoCite"){
+    return 403;
+  }
+  if ($http_user_agent ~* "NerdByNature.Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "EventGuruBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "quickobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "gonzo"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Influencebot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MSRBOT"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Ronzoobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ScoutJet"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Twikle"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SWEBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "RADaR-Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DCPbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Castabot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "imbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "EdisterBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WASALive-Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Accelobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "PostPost"){
+    return 403;
+  }
+  if ($http_user_agent ~* "factbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Setoozbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "biwec"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Search17Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Lijit"){
+    return 403;
+  }
+  if ($http_user_agent ~* "JUST-CRAWLER"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Apercite"){
+    return 403;
+  }
+  if ($http_user_agent ~* "pmoz.info ODP link checker"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LemurWebCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Covario-IDS"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Holmes"){
+    return 403;
+  }
+  if ($http_user_agent ~* "RankurBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "AdsBot-Google"){
+    return 403;
+  }
+  if ($http_user_agent ~* "envolk"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Ask Jeeves/Teoma"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LexxeBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "StackRambler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Abrave Spider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "EvriNid"){
+    return 403;
+  }
+  if ($http_user_agent ~* "arachnode.net"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CamontSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "wikiwix-bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Nymesis"){
+    return 403;
+  }
+  if ($http_user_agent ~* "trendictionbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SEODat"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SygolBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Snapbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ZookaBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CligooRobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "cityreview"){
+    return 403;
+  }
+  if ($http_user_agent ~* "nworm"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SBIder"){
+    return 403;
+  }
+  if ($http_user_agent ~* "TwengaBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Dot TK - spider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ParchBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Peew"){
+    return 403;
+  }
+  if ($http_user_agent ~* "YRSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Urlfilebot (Urlbot)"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Gaisbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WatchMouse"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Tagoobot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WebWatch/Robot_txtChecker"){
+    return 403;
+  }
+  if ($http_user_agent ~* "urlfan-bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "StatoolsBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "page_verifier"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SSLBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SAI Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DomainDB"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WMCAI_robot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "voyager"){
+    return 403;
+  }
+  if ($http_user_agent ~* "copyright sheriff"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Ocelli"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Twiceler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "amibot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "abby"){
+    return 403;
+  }
+  if ($http_user_agent ~* "NetResearchServer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "VideoSurf_bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "XML Sitemaps Generator"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BlinkaCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "nodestackbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Pompos"){
+    return 403;
+  }
+  if ($http_user_agent ~* "taptubot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BabalooSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Yaanb"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Girafabot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "livedoor ScreenShot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "eCairn-Grabber"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FauBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Toread-Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Setoozbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MetaURI"){
+    return 403;
+  }
+  if ($http_user_agent ~* "L.webis"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Web-sniffer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FairShare"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Ruky-Roboter"){
+    return 403;
+  }
+  if ($http_user_agent ~* "ThumbShots-Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "BotOnParade"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Amagit.COM"){
+    return 403;
+  }
+  if ($http_user_agent ~* "HatenaScreenshot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "HolmesBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "dotSemantic"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Karneval-Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "AportWorm"){
+    return 403;
+  }
+  if ($http_user_agent ~* "XmarksFetch"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FeedFinder/bloggz.se"){
+    return 403;
+  }
+  if ($http_user_agent ~* "CorpusCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Willow Internet Crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "OrgbyBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "GingerCrawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "pingdom.com_bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Nutch"){
+    return 403;
+  }
+  if ($http_user_agent ~* "baypup"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Mp3Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "192.comAgent"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Surphace Scout"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WikioFeedBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Szukacz"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DBLBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Thumbnail.CZ robot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "LinguaBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "GurujiBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Charlotte"){
+    return 403;
+  }
+  if ($http_user_agent ~* "50.nu"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SanszBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "moba-crawler"){
+    return 403;
+  }
+  if ($http_user_agent ~* "HeartRails_Capture"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SurveyBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "MnoGoSearch"){
+    return 403;
+  }
+  if ($http_user_agent ~* "smart.apnoti.com Robot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Topicbot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "JadynAveBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "OsObot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WebImages"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WinWebBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Scooter"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Scarlett"){
+    return 403;
+  }
+  if ($http_user_agent ~* "GOFORITBOT"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DKIMRepBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Yanga"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DNS-Digger-Explorer"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Robozilla"){
+    return 403;
+  }
+  if ($http_user_agent ~* "YowedoBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "botmobi"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Fooooo_Web_Video_Crawl"){
+    return 403;
+  }
+  if ($http_user_agent ~* "UptimeDog"){
+    return 403;
+  }
+  if ($http_user_agent ~* "^Nail"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Metaspinner/0.01"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Touche"){
+    return 403;
+  }
+  if ($http_user_agent ~* "RSSMicro.com RSS/Atom Feed Robot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "SniffRSS"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Kalooga"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FeedCatBot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "WebRankSpider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Flatland Industries Web Spider"){
+    return 403;
+  }
+  if ($http_user_agent ~* "DealGates Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Link Valet Online"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Shelob"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Technoratibot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Flocke bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "FollowSite Bot"){
+    return 403;
+  }
+  if ($http_user_agent ~* "Visbot"){
+    return 403;
+  }
