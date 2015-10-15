@@ -7,3 +7,9 @@ function jsValidateForm(thisForm){
 		return false;
 	}
 }
+
+$(function(){
+	$('form').find('.input').change(function(){
+		$(this).css('background', '#FFFFFF');
+	});
+});
