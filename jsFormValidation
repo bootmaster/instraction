@@ -1,0 +1,9 @@
+function jsValidateForm(thisForm){
+	
+	var valInput = thisForm.getElementsByClassName('input')[0].value;
+
+	if(valInput == ''){
+		thisForm.getElementsByClassName('input')[0].style.background = 'rgb(242, 155, 159)';
+		return false;
+	}
+}
