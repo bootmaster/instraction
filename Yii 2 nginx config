@@ -1,0 +1,343 @@
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install nginx memcached mysql-server
+sudo apt-get install php5-fpm php5 php5-cli php5-curl php5-mcrypt php5-intl php5-mysql php5-memcache php5-memcached php5-imagick php-apc
+sudo php5enmod mcrypt
+
+sudo apt-get install redis-server php5-redis
+
+sudo apt-get install git htop curl
+
+sudo mkdir /var /var/domains/ /var/domains/project /var/domains/project/www /var/domains/project/logs
+sudo useradd -d /var/domains/project web
+passwd web
+sudo usermod -a -G adm,sudo web
+su web
+
+sudo nano /etc/php5/mods-available/nginx.ini
+ <<
+  cgi.fix_pathinfo= 0
+  expose_php = Off
+ >>
+ 
+sudo nano /etc/php5/mods-available/php-override.ini
+ <<
+  memory_limit = 512M
+  post_max_size = 128M
+  upload_max_filesize = 128M
+ >>
+ 
+sudo nano /etc/php5/mods-available/realpath-cache.ini
+ <<
+  realpath_cache_size = 1M
+  realpath_cache_ttl = 3600 
+ >>
+ 
+sudo php5enmod nginx
+sudo php5enmod php-override
+sudo php5enmod realpath-cache
+
+sudo nano /etc/php5/fpm/pool.d/www.conf
+ +-
+  user = web
+  group = web
+  listen.owner = web
+  listen.group = web
+ -+
+ 
+sudo service php5-fpm restart
+ 
+mysql -u root -p
+CREATE DATABASE project  CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `project`. * TO 'user'@'localhost';
+FLUSH PRIVILEGES;
+ 
+sudo nano /etc/nginx/nginx.conf
+ +-
+    user web
+ -+
+ 
+sudo rm /etc/nginx/sites-enabled/default
+
+sudo nano /etc/nginx/cloudflare.conf
+ <<
+  ##CloudFlare IP Forwarding
+  set_real_ip_from 199.27.128.0/21;
+  set_real_ip_from 173.245.48.0/20;
+  set_real_ip_from 103.21.244.0/22;
+  set_real_ip_from 103.22.200.0/22;
+  set_real_ip_from 103.31.4.0/22;
+  set_real_ip_from 141.101.64.0/18;
+  set_real_ip_from 108.162.192.0/18;
+  set_real_ip_from 190.93.240.0/20;
+  set_real_ip_from 188.114.96.0/20; 
+  set_real_ip_from 197.234.240.0/22;
+  set_real_ip_from 198.41.128.0/17;
+  set_real_ip_from 162.158.0.0/15;
+  set_real_ip_from 104.16.0.0/12;
+  set_real_ip_from 172.64.0.0/13;
+  set_real_ip_from 2400:cb00::/32;
+  set_real_ip_from 2606:4700::/32;
+  set_real_ip_from 2803:f800::/32;
+  set_real_ip_from 2405:b500::/32;
+  set_real_ip_from 2405:8100::/32;
+  real_ip_header CF-Connecting-IP;
+ >>
+
+sudo nano /etc/nginx/conf.d/charset.conf
+ <<
+  #Specify a charset
+  charset utf-8;
+  
+  client_max_body_size 128M;
+  server_tokens off;
+  
+  merge_slashes off;
+ >>
+ 
+sudo nano /etc/nginx/conf.d/gzip.conf
+ <<
+  # Gzip Settings
+  #gzip on;               # enabled by default
+  #gzip_disable "msie6";  # enabled by default
+  gzip_vary on;
+  gzip_proxied any;
+  gzip_comp_level 6;
+  gzip_buffers 16 8k;
+  gzip_types 
+      application/atom+xml
+      application/javascript
+      application/x-javascript
+      application/json
+      application/ld+json
+      application/manifest+json
+      application/rss+xml
+      application/vnd.geo+json
+      application/vnd.ms-fontobject
+      application/x-font-ttf
+      application/x-web-app-manifest+json
+      application/xhtml+xml
+      application/xml
+      font/opentype
+      image/bmp
+      image/svg+xml
+      image/x-icon
+      text/cache-manifest
+      text/css
+      text/plain
+      text/vcard
+      text/vnd.rim.location.xloc
+      text/vtt
+      text/x-component
+      text/x-cross-domain-policy;
+ >>
+ 
+sudo nano /etc/nginx/expires.conf
+ <<
+  # Expire rules for static content
+  
+  # No default expire rule. This config mirrors that of apache as outlined in the
+  # html5-boilerplate .htaccess file. However, nginx applies rules by location,
+  # the apache rules are defined by type. A consequence of this difference is that
+  # if you use no file extension in the url and serve html, with apache you get an
+  # expire time of 0s, with nginx you'd get an expire header of one month in the
+  # future (if the default expire rule is 1 month). Therefore, do not use a
+  # default expire rule with nginx unless your site is completely static
+  
+  # cache.appcache, your document html and data
+  location ~* \.(?:manifest|appcache|html?|xml|json)$ {
+    expires -1;
+    #access_log logs/static.log;
+  }
+  
+  # Feed
+  location ~* \.(?:rss|atom)$ {
+    expires 1h;
+    add_header Cache-Control "public";
+  }
+  
+  # Media: images, icons, video, audio, HTC
+  location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|webp|mp3)$ {
+    expires 1M;
+    access_log off;
+    add_header Cache-Control "public";
+  }
+  
+  # CSS and Javascript
+  location ~* \.(?:css|js)$ {
+    expires 1y;
+    access_log off;
+    add_header Cache-Control "public";
+  }
+  # favicon disable logs
+  location = /favicon.ico {
+    access_log off;
+    log_not_found off;
+  }
+ >>
+ 
+sudo nano /etc/nginx/cross-domain-fonts.conf
+ <<
+   # Cross domain webfont access
+  location ~* \.(?:ttf|ttc|otf|eot|woff|woff2)$ {
+      # Also, set cache rules for webfonts.
+      #
+      # See http://wiki.nginx.org/HttpCoreModule#location
+      # And https://github.com/h5bp/server-configs/issues/85
+      # And https://github.com/h5bp/server-configs/issues/86
+      expires 1M;
+      access_log off;
+      add_header Cache-Control "public";
+  }
+ >>
+ 
+ sudo nano /etc/nginx/protect-system-files.conf
+  <<
+    # Prevent clients from accessing hidden files (starting with a dot)
+    # This is particularly important if you store .htpasswd files in the site hierarchy
+    location ~* (?:^|/)\. {
+        deny all;
+    }
+    
+    # Prevent clients from accessing to backup/config/source files
+    location ~* (?:\.(?:bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|md)|~)$ {
+        deny all;
+    }
+  >>
+  
+  sudo nano /etc/nginx/php-fpm-bootstrap.conf
+   <<
+    set           $bootstrap  index.php;
+    index         $bootstrap;
+    
+    location / {
+            try_files $uri $uri/ /$bootstrap$is_args$args;
+    }
+    
+    location ~ \.php$ {
+            try_files $uri =404;
+    
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_index               $bootstrap;
+    
+            # Connect to php-fpm via socket
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+    
+            fastcgi_connect_timeout     30s;
+            fastcgi_read_timeout        30s;
+            fastcgi_send_timeout        60s;
+            fastcgi_ignore_client_abort on;
+            fastcgi_pass_header         "X-Accel-Expires";
+    
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            fastcgi_param  PATH_INFO        $fastcgi_path_info;
+            fastcgi_param  HTTP_REFERER     $http_referer;
+            include fastcgi_params;
+    }
+   >>
+   
+   
+sudo nano /etc/nginx/php-fpm-html.conf
+  <<
+    set           $bootstrap    index.php;
+    index         $bootstrap    index.html    index.htm;
+    
+    error_page    404     /404.php;
+    
+    location / {
+            try_files $uri $uri/ =404;
+    }
+    
+    location ~ \.php$ {
+            try_files $uri =404;
+    
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_index               $bootstrap;
+    
+            # Connect to php-fpm via socket
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+    
+            fastcgi_connect_timeout     30s;
+            fastcgi_read_timeout        30s;
+            fastcgi_send_timeout        60s;
+            fastcgi_ignore_client_abort on;
+            fastcgi_pass_header         "X-Accel-Expires";
+    
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            fastcgi_param  PATH_INFO        $fastcgi_path_info;
+            fastcgi_param  HTTP_REFERER     $http_referer;
+            include fastcgi_params;
+    }
+  >>
+  
+  sudo nano /etc/nginx/sites-available/project.tld
+    <<
+      ##
+      # For product environment uncomment "include expires.conf" and comment "include deny-bots.conf;"
+      ##
+      
+      # Must be included in http directive 
+      #include deny-bots.conf;
+      
+      # frontend www redirect
+      server {
+              server_name www.project.com;
+              listen 80;
+              return 301 $scheme://project.com$request_uri;
+      }
+      
+      # frontend
+      server {
+              server_name project.tld;
+              listen 80;
+      
+              root          /var/domains/project/www/frontend/web;
+      
+              access_log    /var/domains/project/logs/access.log combined buffer=50k;
+              error_log     /var/domains/project/logs/error.log notice;
+      
+              # Remove all double or triple slashes
+              #rewrite ^(.*)//+(.*)$ $1/$2 permanent;
+      
+              # Avoid index.php in URI 
+              #if ($request_uri ~* "^(.*/)index\.php(?:.*)$") {
+              #    return 301 $1$is_args$args;
+              #}
+      
+              # CloudFlare restore original visitor IP
+              #include cloudflare.conf;
+              include php-fpm-bootstrap.conf; # Replace with php-fpm-html.conf for no CMS project
+      
+              include cross-domain-fonts.conf;
+              include protect-system-files.conf;
+      
+      
+              # Uncomment this on product environment
+              #include expires.conf;
+      }
+      
+      # backend
+      server {
+              server_name backend.project.com;
+              listen 80;
+      
+              root          /var/domains/project/www/backend/web;
+      
+              access_log    /var/domains/project/logs/access.backend.log combined buffer=50k;
+              error_log     /var/domains/project/logs/error.backend.log notice;
+      
+              # CloudFlare restore original visitor IP
+              #include cloudflare.conf;
+              include php-fpm-bootstrap.conf; # Replace with php-fpm-html.conf for no CMS project
+      
+              include cross-domain-fonts.conf;
+              include protect-system-files.conf;
+      
+      
+              # Uncomment this on product environment
+              #include expires.conf;
+      }
+    >>
+    
+ln -s /etc/nginx/sites-available/project.com /etc/nginx/sites-enabled/
+sudo service nginx restart
